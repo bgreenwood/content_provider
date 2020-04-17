@@ -84,7 +84,7 @@ class ContentProviderPlugin() : MethodCallHandler {
                                 if (this.moveToFirst()) {
                                     do {
                                         val value = HashMap<String, Any>()
-                                        for (index in 0..it.columnCount) {
+                                        for (index in 0..it.columnCount-1) {
                                             when (it.getType(index)) {
                                                 /*int */1 -> value[it.getColumnName(index)] = it.getInt(index)
                                                 /*float */ 2 -> value[it.getColumnName(index)] = it.getFloat(index)
